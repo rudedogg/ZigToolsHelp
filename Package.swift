@@ -44,6 +44,7 @@ let package = Package(
       .testTarget(
         name: "ZigToolsTests",
         dependencies: ["ZigTools"]
+//        dependencies: ["ZigTools", "ZigSyntaxChecker"]
       ),
     ]
 )
