@@ -1,5 +1,5 @@
 # Build
-`zig build-lib src/main.zig -dynamic --name ZigSyntaxChecker`
+`build_framework.sh`
 
 # Resources
 - https://github.com/ziglang/zig/tree/master/lib/std/zig

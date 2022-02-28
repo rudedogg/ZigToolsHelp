@@ -1,4 +1,3 @@
-//import ZigSyntaxChecker
 import ZigSyntaxChecker
 
 struct ZigTools {
