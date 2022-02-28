@@ -1,0 +1,4 @@
+module ZigSyntaxChecker {
+    umbrella header "ZigSyntaxChecker.h"
+    export *
+}

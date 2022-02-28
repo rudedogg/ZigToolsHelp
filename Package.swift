@@ -1,5 +1,4 @@
 // swift-tools-version:5.3
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
@@ -8,31 +7,17 @@ let package = Package(
   products: [
     .library(
       name: "ZigTools",
-      targets: ["ZigSyntaxChecker", "ZigTools"]),
+      targets: ["ZigTools"]),
   ],
   dependencies: [],
   targets: [
     .target(
       name: "ZigTools",
-      dependencies: ["ZigSyntaxChecker"],
-      path: "Sources/ZigTools")
+      dependencies: ["ZigSyntaxChecker"])
     ,
-    .target(
+	.binaryTarget(
       name: "ZigSyntaxChecker",
-      dependencies: [],
-      path: "Sources/ZigSyntaxChecker",
-      exclude: [
-        "src/",
-        "README.md",
-        "build.zig"
-      ],
-      resources: [
-        Resource.copy("libZigSyntaxChecker.dylib"),
-      ],
-      publicHeadersPath: "include",
-      cSettings: [
-        .headerSearchPath("include/ZigSyntaxChecker.h")
-      ]
+      path: "ZigSyntaxChecker.xcframework"
     ),
     .testTarget(
       name: "ZigToolsTests",
